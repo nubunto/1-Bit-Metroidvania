@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://PlayerStatsResource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+acceleration = 512
+max_speed = 64
+friction = 0.2
+air_friction = 0.4
+gravity = 200
+wall_slide_speed = 48
+max_wall_slide_speed = 128
+jump_force = 128
+max_slope_angle = 46
+bullet_speed = 250
+missile_bullet_speed = 150

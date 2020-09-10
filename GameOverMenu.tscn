@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://DefaultTheme.tres" type="Theme" id=1]
+[ext_resource path="res://GameOverMenu.gd" type="Script" id=2]
+
+[node name="GameOverMenu" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 67.0
+margin_top = 70.0
+margin_right = 253.0
+margin_bottom = 109.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 186.0
+margin_bottom = 15.0
+text = "GAME OVER"
+align = 1
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+margin_top = 19.0
+margin_right = 186.0
+margin_bottom = 19.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 23.0
+margin_right = 186.0
+margin_bottom = 39.0
+
+[node name="LoadButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_right = 56.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 56, 16 )
+size_flags_horizontal = 3
+text = "Load"
+
+[node name="QuitMenuButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 60.0
+margin_right = 126.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 66, 16 )
+size_flags_horizontal = 3
+text = "Quit to menu"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 130.0
+margin_right = 186.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 56, 16 )
+size_flags_horizontal = 3
+text = "Quit"
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/LoadButton" to="." method="_on_LoadButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/QuitMenuButton" to="." method="_on_QuitMenuButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
